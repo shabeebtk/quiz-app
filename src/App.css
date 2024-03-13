@@ -1,0 +1,133 @@
+*{
+  padding: 0;
+  margin: 0%;
+}
+
+body{
+  background-color: #12111E;
+  color: white;
+}
+
+.logo_div{
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 10px;
+}
+
+.app_logo{
+  height: 80px;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.logo_parent{
+  display: flex;
+  gap: 50px;
+  padding-top: 20px;
+}
+
+.programming_logo{
+  height: 50px;
+  width: 50px;
+}
+
+.logo_bg{
+  padding: 15px;
+  border: solid;
+  border-radius: 50%;
+}
+
+.logo_bg:hover{
+  scale: 1.2;
+  cursor: pointer;
+}
+
+
+.quiz_body{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz_box{
+  position: relative;
+  min-height: 70vh;
+  height: max-content;
+  width: 70%;
+  padding-top: 2%;
+  border-radius: 10px;
+  background-color: rgba(32, 14, 82, 0.253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
+}
+
+.close_btn{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.question_text{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+.input_parent{
+  width: 100%;
+}
+
+.input_parent > p:first-child{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 3px;
+}
+
+.button_div{
+  padding-top: 3px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  width: 100%;
+}
+
+.input_answer{
+  width: 100%; 
+  background-color:#12111E ;
+  color: white;
+  padding: 10px;
+  resize: none;
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.feedback{
+  width: 100%; 
+  background-color:#12111E ;
+  border: 0;
+  color: white;
+  padding: 10px;
+  font-size: large;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+

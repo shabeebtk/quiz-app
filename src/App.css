@@ -18,23 +18,29 @@ body{
   height: 80px;
 }
 
+.heading{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .banner{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 80vh;
 }
 
 .logo_parent{
-  display: flex;
-  gap: 50px;
-  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10%;
+  height: 32vh;
+  padding-right: 8%;
 }
 
 .programming_logo{
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 .logo_bg{
@@ -85,6 +91,7 @@ body{
 .question_text{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  white-space: wrap;
 }
 
 .input_parent{
@@ -131,3 +138,30 @@ body{
 }
 
 
+
+
+/* mobile  */
+@media only screen and (max-width: 768px) {
+  .heading{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .logo_parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+    height: 32vh;
+  }
+
+  .close_btn{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+}

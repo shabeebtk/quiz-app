@@ -7,6 +7,10 @@ import pythonLogo from './assets/python-logo.png';
 import jsLogo from './assets/javascript-logo.png';
 import javaLogo from './assets/java-logo.png';
 import goLogo from './assets/Go-Logo.png';
+import djangoLogo from './assets/django-logo.png'
+import postgrSQL from './assets/postgresql-logo.svg'
+import mongoDB from './assets/mongodb-logo.svg'
+import nodeJS from './assets/nodejs-logo.svg'
 import closeLogo from './assets/close.png';
 import { Link } from 'react-scroll';
 import { Button } from '@mui/material';
@@ -70,25 +74,42 @@ function App() {
 
       {
         !selectedLanguage &&
-        <div className='banner'>
-          <h1>Test Your Programming Knowledge</h1>
-          <div className='logo_parent'>
-            <div className='logo_bg'>
-              <button data-value="python" onClick={(e) => GenarateQuestion(e)} >
-                <img className='programming_logo' src={pythonLogo} alt="" />
-              </button>
-            </div>
-            <div data-value="javascript" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
-              <img className='programming_logo' src={jsLogo} alt="" />
-            </div>
-            <div data-value="java" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
-              <img className='programming_logo' src={javaLogo} alt="" />
-            </div>
-            <div data-value="Go" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
-              <img className='programming_logo' src={goLogo} alt="" />
+        <>
+        <div className='heading'>
+          <h1>Choose your option</h1>
+        </div>
+          <div className='banner'>
+
+            <div className='logo_parent'>
+              <div className='logo_bg'>
+                <button data-value="python" onClick={(e) => GenarateQuestion(e)} >
+                  <img className='programming_logo' src={pythonLogo} alt="" />
+                </button>
+              </div>
+              <div data-value="javascript" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={jsLogo} alt="" />
+              </div>
+              <div data-value="java" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={javaLogo} alt="" />
+              </div>
+              <div data-value="django" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={djangoLogo} alt="" />
+              </div>
+              <div data-value="react" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={reactLogo} alt="" />
+              </div>
+              <div data-value="mongoDB" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={mongoDB} alt="" />
+              </div>
+              <div data-value="Postgresql" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={postgrSQL} alt="" />
+              </div>
+              <div data-value="node js" onClick={(e) => GenarateQuestion(e)} className='logo_bg'>
+                <img className='programming_logo' src={nodeJS} alt="" />
+              </div>
             </div>
           </div>
-        </div>
+        </>
       }
 
 
@@ -97,7 +118,7 @@ function App() {
         <div id='quiz_section' ref={selected} className='quiz_body'>
           <div className='quiz_box'>
             <img onClick={close} className='close_btn' src={closeLogo} alt="" />
-            <p className='question_text'>{ !loadQuestion ? response : 'loading....'}</p>
+            <p className='question_text'>{!loadQuestion ? response : 'loading....'}</p>
             <div className='input_parent'>
               <textarea value={userAnswer} onChange={(e) => setUserAnswer(e.target.value)} placeholder='answer here' className='input_answer' name="" id="" rows="6"></textarea>
               <div className='button_div'>
